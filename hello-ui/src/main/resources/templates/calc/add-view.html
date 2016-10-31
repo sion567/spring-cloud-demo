@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Admin - CALC add</title>
+</head>
+<body>
+
+<div layout:fragment="content" class="row-fluid">
+    <!-- BreadcrumbNavigation begin-->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="breadcrumb">
+                <i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
+                <i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
+                <li class="active">
+
+                    <a th:href="@{/admin/calc}">计算器简介</a>
+                    <span class="divider">/</span>
+                </li>
+                <li>
+                    加
+                    <span class="divider">/</span>
+                </li>
+                <li>
+                    <a th:href="@{/admin/calc/subtract}">减</a>
+                    <span class="divider">/</span>
+                </li>
+                <li>
+                    <a th:href="@{/admin/calc/multiply}">乘</a>
+                    <span class="divider">/</span>
+                </li>
+                <li>
+                    <a th:href="@{/admin/calc/divide}">除</a>
+                    <span class="divider">/</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="span12" id="content">
+        <div class="row-fluid">
+            <!-- block -->
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left">加法演示</div>
+                </div>
+                <div class="block-content collapse in">
+                    <form class="form-horizontal" th:action="@{/admin/calc/add}" method="post">
+                        <fieldset>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <input th:value="${a}" class="input-xlarge focused" id="a" name="a" type="text" value="0">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <input th:value="${b}" class="input-xlarge focused" id="b" name="b" type="text" value="0">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">结果:</label>
+                                    <div class="controls">
+                                        <span th:text="${result}" class="input-xlarge uneditable-input">Some value here</span>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Calculate</button>
+                                    <button type="reset" class="btn">Cancel</button>
+                                </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!-- /block -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

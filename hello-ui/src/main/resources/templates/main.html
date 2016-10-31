@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+
+<head>
+    <title>Admin - Welcome</title>
+</head>
+<body>
+
+<div layout:fragment="content" class="row-fluid">
+    <!-- BreadcrumbNavigation begin-->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="breadcrumb">
+                <i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
+                <i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
+                <li>
+                    <a href="#">Dashboard</a> <span class="divider">/</span>
+                </li>
+                <li class="active">
+                    Welcome
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- BreadcrumbNavigation end-->
+
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4>Welcome</h4>
+        The operation completed successfully</div>
+
+</div>
+
+</body>
+</html>

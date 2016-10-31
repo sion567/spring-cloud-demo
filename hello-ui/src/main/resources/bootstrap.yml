@@ -1,9 +1,9 @@
 spring:
  application:
-  name: calc-service
+  name: hello-ui
  cloud:
   config:
    uri: http://localhost:11088/
 
 server:
- port: 11220
+ port: 7788

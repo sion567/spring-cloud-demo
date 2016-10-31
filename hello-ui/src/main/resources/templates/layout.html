@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+
+<head>
+    <title>Admin</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" media="screen" th:href="@{/public/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" media="screen" th:href="@{/public/bootstrap/css/bootstrap-responsive.min.css}"/>
+    <link rel="stylesheet" media="screen" th:href="@{/public/assets/styles.css}"/>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script th:src="@{/public/vendors/html5.js}"></script>
+    <![endif]-->
+    <script th:src="@{/public/vendors/modernizr-2.6.2-respond-1.1.0.min.js}"></script>
+
+    <!--/.fluid-container-->
+    <script th:src="@{/public/vendors/jquery-1.9.1.min.js}"></script>
+    <script th:src="@{/public/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/public/assets/scripts.js}"></script>
+    <script>
+        $(function() {
+        });
+    </script>
+</head>
+
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div th:replace="fragments/side :: side"></div>
+        <!--/span-->
+        <div class="span9" id="content">
+            <div layout:fragment="content"></div>
+        </div>
+    </div>
+    <hr>
+    <div th:replace="fragments/footer :: footer"></div>
+</div>
+</body>
+</html>

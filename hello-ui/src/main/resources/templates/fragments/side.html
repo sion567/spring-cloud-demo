@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+
+<body>
+<div th:fragment="side">
+
+    <div class="span3" id="sidebar">
+        <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+            <li>
+                <a th:href="@{/admin/wel}"><i class="icon-chevron-right"></i> Dashboard</a>
+            </li>
+            <li>
+                <a th:href="@{/admin/calc}"><i class="icon-chevron-right"></i> 计算</a>
+            </li>
+            <li>
+                <a th:href="@{/admin/hello}"><i class="icon-chevron-right"></i> hello kitty</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
