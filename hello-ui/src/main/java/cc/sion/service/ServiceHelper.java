@@ -11,4 +11,14 @@ public class ServiceHelper {
         return -9999;
     }
 
+
+    public String sayFallback(String name,Throwable e)
+    {
+        if(e!=null)
+            e.printStackTrace();
+        else
+            System.out.println("not Throwable");
+
+        return ":(";
+    }
 }

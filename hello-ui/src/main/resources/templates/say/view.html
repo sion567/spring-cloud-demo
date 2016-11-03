@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <title>Admin - Welcome</title>
 </head>
 <body>
+
+<div layout:fragment="content" class="row-fluid">
+    <!-- BreadcrumbNavigation begin-->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="breadcrumb">
+                <i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
+                <i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
+                <li class="active">
+                    hello kitty
+                    <span class="divider">/</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="span12" id="content">
+        <div class="row-fluid">
+            <!-- block -->
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left">hello kitty</div>
+                </div>
+                <div class="block-content collapse in">
+                    <div class="span2">
+                        <div>
+                            <div class='external-event'>
+                                <a th:href="@{/admin/say/hello/kitty}">hello</a>
+                            </div>
+                            <div class='external-event'>
+                                <a th:href="@{/admin/say/bye/kitty}">bye</a>
+                            </div>
+                            <div class='external-event'>
+                                <a th:href="@{/admin/say/waiting/kitty}">waiting</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="span10">
+                        <div class="row-fluid">
+                            <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <span th:text="${message}"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /block -->
+        </div>
+    </div>
+</div>
+
+
+
+
 
 </body>
 </html>
