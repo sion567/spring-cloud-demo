@@ -1,6 +1,3 @@
-info:
-  stage: calc
-
 eureka:
   client:
     serviceUrl:

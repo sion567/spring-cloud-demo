@@ -1,8 +1,11 @@
 server:
-    port: 11088
+  port: 11088
 spring:
- application:
+  application:
     name: config-server
- profiles:
-  active: native
+  profiles:
+    active: native
+  cloud:
+    config:
+      name: sample
 

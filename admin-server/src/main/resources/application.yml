@@ -1,0 +1,27 @@
+info:
+  stage: admin manage
+
+spring:
+  application:
+    name: spring-boot-admin
+  boot:
+    admin:
+      url: http://localhost:8080
+  cloud:
+    config:
+      name: sample
+      uri: http://localhost:11088/
+
+endpoints:
+  health:
+    sensitive: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:11011/eureka/
+
+logging:
+  level:
+    org.springframework: INFO
+    cc.sion: debug

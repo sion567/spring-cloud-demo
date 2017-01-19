@@ -4,6 +4,10 @@ spring:
  cloud:
   config:
    uri: http://localhost:11088/
+   name: sample
+ boot:
+  admin:
+   url: http://localhost:8080
 
 server:
  port: 11220
