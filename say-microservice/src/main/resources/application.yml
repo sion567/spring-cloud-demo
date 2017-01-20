@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://lq-ds:11011/eureka/
+      defaultZone: http://localhost:11011/eureka/
 
 logging:
   level:

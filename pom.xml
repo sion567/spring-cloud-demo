@@ -15,7 +15,8 @@
         <module>ds-server</module>
         <module>conf-server</module>
         <module>server-manage</module>
-        <module>admin-server</module>        
+        <module>admin-server</module>    
+        <module>dashboard-server</module>            
     </modules>
 
 		<parent>

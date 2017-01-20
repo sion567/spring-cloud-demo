@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>say-microservice</artifactId>
+    <artifactId>dashboard-server</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
 
@@ -14,25 +14,33 @@
     </parent>
 
     <properties>
-        <project.build.name>say-ms</project.build.name>
-        <start-class>cc.sion.Application</start-class>
+        <project.build.name>dashboard-server</project.build.name>
     </properties>
-
+    
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <!--hystrix-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>1.4.3</version>
-        </dependency>
+			 <dependency>
+			      <groupId>org.springframework.boot</groupId>
+			      <artifactId>spring-boot-starter-web</artifactId>
+			  </dependency>
+			  <dependency>
+			      <groupId>org.springframework.boot</groupId>
+			      <artifactId>spring-boot-starter-actuator</artifactId>
+			  </dependency>
+			
+			  <dependency>
+			      <groupId>org.springframework.cloud</groupId>
+			      <artifactId>spring-cloud-starter-hystrix</artifactId>
+			  </dependency>
+			
+			  <dependency>
+			      <groupId>org.springframework.cloud</groupId>
+			      <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+			  </dependency>
+			
+			  <dependency>
+			      <groupId>org.springframework.cloud</groupId>
+			      <artifactId>spring-cloud-starter-turbine</artifactId>   
+			  </dependency>
     </dependencies>
 
     <build>

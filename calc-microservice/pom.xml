@@ -24,16 +24,21 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
+        <!--hystrix-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>1.4.1</version>
+            <version>1.4.3</version>
         </dependency>
 
     </dependencies>
 
     <build>
-    		<finalName>${project.build.name}</finalName>
+        <finalName>${project.build.name}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

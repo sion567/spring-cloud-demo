@@ -6,7 +6,9 @@ spring:
     name: spring-boot-admin
   boot:
     admin:
-      url: http://localhost:8080
+      url: http://localhost:18080
+      routes:
+        endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,turbine.stream
   cloud:
     config:
       name: sample
@@ -25,3 +27,6 @@ logging:
   level:
     org.springframework: INFO
     cc.sion: debug
+
+server:
+ port: 18080

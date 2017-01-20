@@ -1,9 +1,19 @@
 spring:
+ thymeleaf:
+  cache:  true
+  mode: html
  application:
   name: hello-ui
  cloud:
   config:
-   uri: http://lq-ds:11088/
+   name: sample
+   uri: http://localhost:11088/
+ boot:
+  admin:
+   url: http://localhost:18080
+   routes:
+    endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,turbine.stream
+
 
 server:
  port: 7788
