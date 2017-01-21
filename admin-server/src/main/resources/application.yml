@@ -4,29 +4,31 @@ info:
 spring:
   application:
     name: spring-boot-admin
-  boot:
-    admin:
-      url: http://localhost:18080
-      routes:
-        endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,turbine.stream
   cloud:
     config:
       name: sample
       uri: http://localhost:11088/
 
+# tag::configuration-ui-hystrix[]
+spring.boot.admin.routes.endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,turbine.stream
+# end::configuration-ui-hystrix[]
+
+
 endpoints:
   health:
     sensitive: false
 
+
+# tag::configuration-eureka[]
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
   client:
+    registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://localhost:11011/eureka/
+# end::configuration-eureka[]
 
-logging:
-  level:
-    org.springframework: INFO
-    cc.sion: debug
 
 server:
  port: 18080

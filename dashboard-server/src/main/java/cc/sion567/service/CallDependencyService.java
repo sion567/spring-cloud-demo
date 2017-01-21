@@ -10,18 +10,17 @@ public class CallDependencyService {
 
     private Random random = new Random();
 
-    @HystrixCommand(fallbackMethod = "fallback")
-    public String mockGetUserInfo(){
+    @HystrixCommand(fallbackMethod = "onFailedToSayHello")
+    public String sayHello(String name) {
         int randomInt= random.nextInt(10) ;
-        System.out.println("random:"+randomInt);
-        if(randomInt<8){  //模拟调用失败情况
-            throw new RuntimeException("call dependency service fail.");
-        }else{
-            return "UserName:h2;number:"+randomInt;
+        if(randomInt<8){
+            throw new RuntimeException("I failed because you told me to");
         }
+        return "Hello,"+name;
     }
 
-    public String fallback(){
-        return "some exception occur call fallback method.";
+    private String onFailedToSayHello(String name) {
+        return "Bye:"+name+"~";
     }
+
 }

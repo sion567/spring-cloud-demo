@@ -3,12 +3,8 @@ package cc.sion.service;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
-import org.springframework.util.concurrent.ListenableFuture;
-import org.springframework.util.concurrent.ListenableFutureCallback;
 import org.springframework.web.client.AsyncRestTemplate;
 import org.springframework.web.client.RestTemplate;
 
@@ -31,14 +27,10 @@ public class RemoteService extends ServiceHelper {
     @HystrixCommand(fallbackMethod = "sayFallback")
     public String sayHello(String name) {
         System.out.println("**************************");
-        System.out.println("**************************");
-        System.out.println("**************************");
-        System.out.println("**************************");
-        System.out.println("**************************");
 
         HttpHeaders headers = new HttpHeaders();
-        HttpEntity<String> entity = new HttpEntity<String>("test12345",headers);
-        System.out.println("step1.....");
+//        HttpEntity<String> entity = new HttpEntity<String>("test12345",headers);
+//        System.out.println("step1.....");
 //        ListenableFuture<ResponseEntity<String>> futureTest = asyncRestTemplate.postForEntity(utils_url + "/mail",entity, String.class);
 //        futureTest.addCallback(new ListenableFutureCallback<ResponseEntity<String>>() {
 //            @Override
@@ -52,10 +44,20 @@ public class RemoteService extends ServiceHelper {
 //                System.out.println("error!!!");
 //            }
 //        });
-        restTemplate.postForObject(utils_url + "/mail2",entity, String.class);
+//        restTemplate.postForObject(utils_url + "/mail2",entity, String.class);
         System.out.println("step2.....");
-        return restTemplate.getForObject(hello_url+"/sayHello/"+name, String.class);
+
+        ResponseEntity<String> result = restTemplate.exchange(hello_url + "/sayHello/" + name, HttpMethod.GET, new HttpEntity<String>(headers), String.class);
+        System.out.println(result.getStatusCode());
+        System.out.println(result.getStatusCodeValue());
+        System.out.println(result.getBody());
+        return result.getBody();
+
+
+
+//        return restTemplate.getForObject(hello_url+"/sayHello/"+name, String.class);
     }
+
 
     @HystrixCommand(fallbackMethod = "sayFallback")
     public String sayBye(String name) {

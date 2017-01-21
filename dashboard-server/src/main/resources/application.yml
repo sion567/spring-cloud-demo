@@ -1,15 +1,9 @@
-info:
-  stage: dashboard
-
 spring:
   application:
     name: dashboard-server
   cloud:
     config:
       uri: http://localhost:11088/
-  boot:
-    admin:
-      url: http://localhost:18080
 
 eureka:
   instance:
@@ -20,6 +14,10 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:11011/eureka/
 
+
+hystrix:
+  stream:
+    maxConcurrentConnections: 20
 
 server:
  port: 1133

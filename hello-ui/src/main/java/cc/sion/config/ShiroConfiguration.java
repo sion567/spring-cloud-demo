@@ -60,6 +60,14 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put("/admin/**", "authc,roles[admin]");
         filterChainDefinitionMap.put("/**", "user");
 
+        filterChainDefinitionMap.put("/health", "anon");//查看应用健康指标
+        filterChainDefinitionMap.put("/info", "anon");//查看应用信息
+        filterChainDefinitionMap.put("/env", "anon");//查看所有环境变量
+        filterChainDefinitionMap.put("/metrics", "anon");//查看应用基本指标
+        filterChainDefinitionMap.put("/trace", "anon");//查看基本追踪信息
+        filterChainDefinitionMap.put("/dump", "anon");//打印线程栈
+
+
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         shiroFilterFactoryBean.setLoginUrl("/login");
         shiroFilterFactoryBean.setSuccessUrl("/");

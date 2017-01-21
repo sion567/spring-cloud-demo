@@ -5,11 +5,6 @@ spring:
   config:
    uri: http://localhost:11088/
    name: sample
-  boot:
-    admin:
-      url: http://localhost:18080
-      routes:
-        endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,turbine.stream
 
 server:
  port: 11220

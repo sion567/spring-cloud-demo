@@ -1,8 +1,6 @@
-info:
-  stage: conf
-  
 server:
   port: 11088
+
 spring:
   application:
     name: config-server

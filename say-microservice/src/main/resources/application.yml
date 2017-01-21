@@ -1,9 +1,13 @@
+info:
+  stage: say demo
+  description: include spring-boot-admin client
+
+# tag::configuration-eureka[]
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
   client:
+    registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://localhost:11011/eureka/
-
-logging:
-  level:
-    org.springframework: INFO
-    cc.sion: debug
+# end::configuration-eureka[]

@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.turbine.EnableTurbine;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -34,10 +35,10 @@ public class Application {
 
     @Autowired
     private HystrixService service;
-    @RequestMapping("/call")
+    @RequestMapping("/test/{name}")
     @ResponseBody
-    public String callDependencyService(){
-        return service.callDependencyService();
+    public String callDependencyService(@PathVariable String name){
+        return service.callDependencyService(name);
     }
 }
 /*

@@ -17,8 +17,6 @@ public class ServiceHelper {
     {
         if(e!=null)
             e.printStackTrace();
-        else
-            System.out.println("not Throwable");
 
         return ":(";
     }

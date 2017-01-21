@@ -24,7 +24,10 @@ public class SayWebController {
 
     @RequestMapping(value = "hello/{name}",method = RequestMethod.GET)
     public String hello(@PathVariable String name,Model model,ServletRequest request) throws Exception {
-        model.addAttribute("message", remoteService.sayHello(name));
+        System.out.println("--" + name);
+        String msg = remoteService.sayHello(name);
+        System.out.println("==" + msg);
+        model.addAttribute("message", msg);
         return "say/view";
     }
     @RequestMapping(value = "bye/{name}",method = RequestMethod.GET)
