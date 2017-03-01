@@ -1,4 +1,6 @@
 spring:
- cloud:
-  config:
-   uri: http://localhost:11088/
+  application:
+    name: ds-server
+  cloud:
+    config:
+      uri: http://localhost:11088/

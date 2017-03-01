@@ -14,10 +14,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:11011/eureka/
 
-
-hystrix:
-  stream:
-    maxConcurrentConnections: 20
+logging:
+  level:
+    org.springframework.web:  debug
 
 server:
  port: 1133

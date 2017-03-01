@@ -11,8 +11,6 @@ eureka:
 info:
   description: exclude spring-boot-admin client
 
-logging:
-  level:
-    org.springframework: INFO
-    cc.sion: debug
-    de.codecentric.boot.admin: debug
+netflix:
+  atlas:
+    uri:  http://localhost:7101/api/v1/publish/

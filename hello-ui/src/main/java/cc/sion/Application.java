@@ -1,6 +1,5 @@
 package cc.sion;
 
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -22,7 +21,6 @@ public class Application {
     RestTemplate restTemplate() {
         return new RestTemplate();
     }
-
 
     @Bean
     AsyncRestTemplate asyncRestTemplate(){

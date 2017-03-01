@@ -60,12 +60,12 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put("/admin/**", "authc,roles[admin]");
         filterChainDefinitionMap.put("/**", "user");
 
-        filterChainDefinitionMap.put("/health", "anon");//²é¿´Ó¦ÓÃ½¡¿µÖ¸±ê
-        filterChainDefinitionMap.put("/info", "anon");//²é¿´Ó¦ÓÃĞÅÏ¢
-        filterChainDefinitionMap.put("/env", "anon");//²é¿´ËùÓĞ»·¾³±äÁ¿
-        filterChainDefinitionMap.put("/metrics", "anon");//²é¿´Ó¦ÓÃ»ù±¾Ö¸±ê
-        filterChainDefinitionMap.put("/trace", "anon");//²é¿´»ù±¾×·×ÙĞÅÏ¢
-        filterChainDefinitionMap.put("/dump", "anon");//´òÓ¡Ïß³ÌÕ»
+        filterChainDefinitionMap.put("/health", "anon");//æŸ¥çœ‹åº”ç”¨å¥åº·æŒ‡æ ‡
+        filterChainDefinitionMap.put("/info", "anon");//æŸ¥çœ‹åº”ç”¨ä¿¡æ¯
+        filterChainDefinitionMap.put("/env", "anon");//æŸ¥çœ‹æ‰€æœ‰ç¯å¢ƒå˜é‡
+        filterChainDefinitionMap.put("/metrics", "anon");//æŸ¥çœ‹åº”ç”¨åŸºæœ¬æŒ‡æ ‡
+        filterChainDefinitionMap.put("/trace", "anon");//æŸ¥çœ‹åŸºæœ¬è¿½è¸ªä¿¡æ¯
+        filterChainDefinitionMap.put("/dump", "anon");//æ‰“å°çº¿ç¨‹æ ˆ
 
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);

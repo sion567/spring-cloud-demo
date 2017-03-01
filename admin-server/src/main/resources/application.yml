@@ -8,11 +8,11 @@ spring:
     config:
       name: sample
       uri: http://localhost:11088/
-
-# tag::configuration-ui-hystrix[]
-spring.boot.admin.routes.endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,turbine.stream
-# end::configuration-ui-hystrix[]
-
+  boot:
+    admin:
+      url:  http://localhost:${server.port}
+      routes:
+        endpoints: metrics
 
 endpoints:
   health:

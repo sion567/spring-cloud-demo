@@ -14,7 +14,7 @@
     </parent>
 
     <properties>
-        <project.build.name>ds-server</project.build.name>
+        <project.build.name>conf-server</project.build.name>
     </properties>
     
     <dependencies>

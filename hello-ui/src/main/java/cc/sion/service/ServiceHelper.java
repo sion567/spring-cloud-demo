@@ -8,13 +8,22 @@ public class ServiceHelper {
 
     final static String utils_url = "http://SYS-SERVICE";
 
-    public int calcFallback(int a,int b){
+    public int calcFallback(int a,int b,Throwable e){
+        System.out.println("------------------------");
+        System.out.println("------------------------");
+        System.out.println("------------------------");
+        if(e!=null)
+            e.printStackTrace();
         return -9999;
     }
 
 
     public String sayFallback(String name,Throwable e)
     {
+
+        System.out.println("=======================");
+        System.out.println("=======================");
+        System.out.println("=======================");
         if(e!=null)
             e.printStackTrace();
 

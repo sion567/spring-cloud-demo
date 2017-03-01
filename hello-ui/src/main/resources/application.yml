@@ -6,7 +6,17 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:11011/eureka/
 
-logging:
-  level:
-    org.springframework: INFO
-    cc.sion: debug
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled:  false
+        isolation:
+          thread:
+            timeoutInMilliseconds:  10000
+  threadpool:
+    default:
+      coreSize: 50
+      maxQueueSize: 100
+      queueSizeRejectionThreshold: 50

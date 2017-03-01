@@ -7,6 +7,8 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
   client:
+    healthcheck:
+      enabled: true
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://localhost:11011/eureka/

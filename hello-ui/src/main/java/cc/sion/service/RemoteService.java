@@ -20,6 +20,7 @@ public class RemoteService extends ServiceHelper {
 
     @HystrixCommand(fallbackMethod = "calcFallback")
     public int add(int a,int b) {
+        System.out.println("add:"+a+"+"+b);
         return restTemplate.getForObject(calc_url+"/add?a="+a+"&b="+b, Integer.class);
     }
 

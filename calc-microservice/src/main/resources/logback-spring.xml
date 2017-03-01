@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <logger name="ccc.sion" level="DEBUG"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="de.codecentric.boot.admin" level="DEBUG"/>
+    <logger name="com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver" level="WARN"/>
+
     <jmxConfigurator/>
 </configuration>

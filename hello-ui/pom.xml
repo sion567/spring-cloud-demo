@@ -29,10 +29,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+
        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -72,16 +69,10 @@
             <version>19.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>1.4.3</version>
-        </dependency>
-
     </dependencies>
 
     <build>
-    		<finalName>${project.build.name}</finalName>
+        <finalName>${project.build.name}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
