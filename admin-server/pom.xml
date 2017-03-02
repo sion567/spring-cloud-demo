@@ -14,7 +14,7 @@
     </parent>
 
     <properties>
-        <boot.admin.version>1.4.3</boot.admin.version>
+        <boot.admin.version>1.4.6</boot.admin.version>
         <project.build.name>admin-server</project.build.name>
     </properties>
     

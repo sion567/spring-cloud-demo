@@ -15,14 +15,15 @@
         <module>ds-server</module>
         <module>conf-server</module>
         <module>server-manage</module>
-        <module>admin-server</module>    
-        <module>dashboard-server</module>            
+        <module>admin-server</module>
+        <module>dashboard-server</module>
+        <module>gateway-server</module>
     </modules>
 
 		<parent>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-parent</artifactId>
-		    <version>1.4.0.RELEASE</version>
+		    <version>1.4.4.RELEASE</version>
 		</parent>
 
     <properties>
@@ -32,14 +33,14 @@
     </properties>
 
     <dependencies>
-		    <dependency>
-		        <groupId>org.springframework.cloud</groupId>
-		        <artifactId>spring-cloud-starter-config</artifactId>
-		    </dependency>
-		    <dependency>
-		        <groupId>org.springframework.cloud</groupId>
-		        <artifactId>spring-cloud-starter-eureka</artifactId>
-		    </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-eureka</artifactId>
+    </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -54,22 +55,22 @@
           <dependency>
              <groupId>de.codecentric</groupId>
              <artifactId>spring-boot-admin-starter-client</artifactId>
-             <version>1.4.3</version>
+             <version>1.4.6</version>
          </dependency>
         
         
         
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Camden.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+		<dependencyManagement>
+		    <dependencies>
+		        <dependency>
+		            <groupId>org.springframework.cloud</groupId>
+		            <artifactId>spring-cloud-dependencies</artifactId>
+		            <version>Camden.SR5</version>
+		            <type>pom</type>
+		            <scope>import</scope>
+		        </dependency>
+		    </dependencies>
+		</dependencyManagement>
 </project>

@@ -1,0 +1,6 @@
+info:
+  description: api geteway
+
+
+zuul:
+  RibbonRoutingFilter.route.disable: true
